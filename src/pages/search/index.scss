@@ -1,0 +1,164 @@
+.search-page {
+  background: linear-gradient(to bottom, #acd5f1, white);
+  height: 30vh; /* 占页面高度的 30% */
+  width: 100%; /* 占满整个屏幕宽度 */
+  position: relative;
+  z-index: 1; /* 提升层级 */
+
+  /* 外部容器 */
+  .input-bar {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center;
+    padding: 10px;
+  }
+
+  /* 输入框容器 */
+  .input-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ccc; /* 默认边框 */
+    border-radius: 25px 0 0 25px; /* 左侧圆角 */
+    flex: 1; /* 输入框填满剩余空间 */
+    height: 50px; /* 设置统一高度 */
+    transition: border-color 0.3s, box-shadow 0.3s; /* 动画效果 */
+  }
+
+  /* 输入框样式 */
+  .input-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 23px; /* 字体大小23px */
+    color: #333;
+    padding: 10px 15px; /* 调整内边距 */
+    height: 100%; /* 继承容器高度 */
+  }
+
+  /* 输入框高亮效果 */
+  .input-container:focus-within {
+    border-color: #4a90e2; /* 浅蓝色边框 */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.5); /* 蓝色阴影 */
+  }
+
+  /* 按钮样式 */
+  .search-button {
+    background-color: #4a90e2; /* 蓝色背景 */
+    color: #fff; /* 文字颜色 */
+    font-size: 23px; /* 字体大小23px */
+    border: none;
+    padding: 0 20px; /* 调整左右内边距 */
+    border-radius: 0 25px 25px 0; /* 右侧圆角 */
+    height: 53px; /* 按钮高度与输入框一致 */
+    line-height: 53px; /* 文本垂直居中 */
+    margin-left: -2px; /* 修复按钮与输入框边框间隙 */
+    transition: background-color 0.3s; /* 动画效果 */
+  }
+
+  /* 按钮点击时效果 */
+  .search-button:active {
+    background-color: #357abd; /* 点击时颜色加深 */
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgb(172, 213, 241);
+    padding: 12px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+  }
+
+  .card-image {
+    width: 100px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .card-content {
+    flex: 1;
+    padding: 0 10px;
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .card-numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: #666;
+    font-weight: 500;
+
+    margin-top: 16px;
+  }
+
+  .separator {
+    margin: 0 5px;
+    color: #999;
+    font-weight: bold;
+  }
+
+  .number-value {
+    font-weight: bold;
+    font-size: 24px;
+    color: #4a90e2;
+  }
+
+  .card-tags {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #666;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.5;
+  }
+
+  .tag-yes {
+    background-color: #5cb85c; /* 绿色 */
+  }
+
+  .tag-no {
+    background-color: #d9534f; /* 红色 */
+  }
+
+  .card-arrow {
+    font-size: 20px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+
+
+}
+

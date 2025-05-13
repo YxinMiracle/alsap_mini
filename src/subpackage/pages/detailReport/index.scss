@@ -1,0 +1,83 @@
+.detail-report-page {
+  background: linear-gradient(to bottom, #acd5f1, white);
+  height: 30vh; /* 占页面高度的 30% */
+  width: 100%; /* 占满整个屏幕宽度 */
+  position: relative;
+  z-index: 1; /* 提升层级 */
+
+  .button-block {
+    height: 35px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    width: 70%;  /* 卡片宽度为70% */
+    height: 24vh;  /* 设置卡片的高度为28vh */
+    margin: 0 auto;  /* 居中显示 */
+    animation: cardAnimation 0.5s ease-out; /* 加入卡片动画 */
+  }
+
+  @keyframes cardAnimation {
+    0% {
+      transform: scale(0.95);  /* 初始缩小 */
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);  /* 还原正常 */
+      opacity: 1;
+    }
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-title {
+    font-size: 28px;  /* 增大标题字体 */
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    line-height: 1.3;  /* 控制行高，避免标题过于密集 */
+  }
+
+  .card-date {
+    font-size: 18px;  /* 增大日期字体 */
+    color: #777;
+    white-space: nowrap;  /* 避免换行 */
+  }
+
+  .card-body {
+    margin-top: 16px;
+    overflow-y: auto;
+  }
+
+  .card-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;  /* 减少下方间距 */
+  }
+
+  .icon {
+    font-size: 26px;  /* 增大图标字体 */
+    margin-right: 14px;
+  }
+
+  .info-label {
+    font-size: 22px;  /* 增大标签字体 */
+    color: #666;
+  }
+
+  .info-value {
+    font-size: 22px;  /* 增大值字体 */
+    font-weight: bold;
+    color: #333;
+  }
+
+
+}

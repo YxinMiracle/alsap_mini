@@ -1,0 +1,49 @@
+.index-page {
+  background: linear-gradient(to bottom, #acd5f1, white);
+  height: 30vh; /* 占页面高度的 30% */
+  width: 100%; /* 占满整个屏幕宽度 */
+  position: relative;
+  z-index: 1; /* 提升层级 */
+
+  .information-card {
+    margin-bottom: 16px;
+    opacity: 0;  /* 初始时卡片不可见 */
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;  /* 保持动画结束后的样式 */
+  }
+
+  /* 第1和第3个卡片从左边进入 */
+  .left-enter {
+    animation-name: leftEnter;
+  }
+
+  /* 第2个卡片从右边进入 */
+  .right-enter {
+    animation-name: rightEnter;
+  }
+
+  /* 左侧进入动画 */
+  @keyframes leftEnter {
+    0% {
+      transform: translateX(-50%);  /* 从屏幕外左边开始 */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);  /* 最终位置为正常位置 */
+      opacity: 1;
+    }
+  }
+
+  /* 右侧进入动画 */
+  @keyframes rightEnter {
+    0% {
+      transform: translateX(50%);  /* 从屏幕外右边开始 */
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);  /* 最终位置为正常位置 */
+      opacity: 1;
+    }
+  }
+
+}
